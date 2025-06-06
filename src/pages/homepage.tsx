@@ -5,9 +5,9 @@ import { StatsSection } from '../components/StatsSection'
 import { TeamSection } from '../components/TeamSection'
 
 
-export const Home = () => {
+export const Home: React.FC = () => {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-900 to-gray-800 text-white overflow-x-hidden w-full">
+    <div className="text-white w-full">
       <HeroSection />
       <ServicesSection />
       <TeamSection />

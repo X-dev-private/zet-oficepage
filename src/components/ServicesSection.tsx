@@ -1,5 +1,5 @@
-// components/ServicesSection.tsx
-import { motion, Variants } from 'framer-motion'
+import { motion } from 'framer-motion'
+import type { Variants } from 'framer-motion'
 import { FiCode, FiCpu, FiDatabase, FiLayers, FiServer, FiZap } from 'react-icons/fi'
 import { SectionHeader } from './SectionHeader'
 import { useState } from 'react'

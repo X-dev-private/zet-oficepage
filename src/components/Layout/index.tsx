@@ -5,12 +5,12 @@ import Navbar from './Navbar'
 
 const Layout = () => {
   return (
-    <div className="flex flex-col min-h-screen">
+    <div className="flex flex-col min-h-screen bg-gradient-to-br from-gray-900 to-gray-800">
       <Header />
       <Navbar />
       
-      <main className="flex-grow p-4 md:p-8">
-        <Outlet /> {/* As páginas serão renderizadas aqui */}
+      <main className="flex-grow">
+        <Outlet />
       </main>
       
       <Footer />
