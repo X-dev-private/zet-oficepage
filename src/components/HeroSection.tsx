@@ -1,6 +1,7 @@
 // components/HeroSection.jsx
 import { motion } from 'framer-motion'
 import { FiArrowRight } from 'react-icons/fi'
+import { Link } from 'react-router-dom'
 
 export const HeroSection = () => (
   <section className="relative overflow-hidden w-full">
@@ -51,19 +52,23 @@ const Description = () => (
 
 const ActionButtons = () => (
   <div className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
-    <motion.button 
-      whileHover={{ scale: 1.05 }}
-      whileTap={{ scale: 0.95 }}
-      className="px-8 py-3 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full font-medium hover:opacity-90 transition flex items-center shadow-lg shadow-blue-500/20"
-    >
-      Our Projects <FiArrowRight className="ml-2" />
-    </motion.button>
-    <motion.button 
-      whileHover={{ scale: 1.05 }}
-      whileTap={{ scale: 0.95 }}
-      className="px-8 py-3 border border-blue-400 text-blue-400 rounded-full font-medium hover:bg-blue-900/30 transition shadow-lg shadow-blue-500/10"
-    >
-      Meet the Team
-    </motion.button>
+    <Link to="/projects">
+      <motion.button 
+        whileHover={{ scale: 1.05 }}
+        whileTap={{ scale: 0.95 }}
+        className="px-8 py-3 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full font-medium hover:opacity-90 transition flex items-center shadow-lg shadow-blue-500/20"
+      >
+        Our Projects <FiArrowRight className="ml-2" />
+      </motion.button>
+    </Link>
+    <Link to="/contact">
+      <motion.button 
+        whileHover={{ scale: 1.05 }}
+        whileTap={{ scale: 0.95 }}
+        className="px-8 py-3 border border-blue-400 text-blue-400 rounded-full font-medium hover:bg-blue-900/30 transition shadow-lg shadow-blue-500/10"
+      >
+        Meet the Team
+      </motion.button>
+    </Link>
   </div>
 )

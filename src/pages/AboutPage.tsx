@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion'
-import { FiAward, FiCode, FiCpu, FiGlobe, FiUsers } from 'react-icons/fi'
+import { FiAward, FiCode, FiCpu, FiGlobe, FiUsers, FiDollarSign } from 'react-icons/fi'
 
 export const About = () => {
   return (
@@ -20,10 +20,10 @@ export const About = () => {
           className="text-center mb-16"
         >
           <h2 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-indigo-300 to-purple-400 bg-clip-text text-transparent mb-4">
-            Nossa História
+            Nossa Jornada
           </h2>
           <p className="text-lg text-gray-300 max-w-3xl mx-auto">
-            Transformando ideias em realidade digital através de tecnologia inovadora e design excepcional
+            Da ideia à realidade: construindo o futuro da tecnologia com paixão e propósito
           </p>
         </motion.div>
 
@@ -41,14 +41,12 @@ export const About = () => {
                 Quem somos
               </h3>
               <p className="text-gray-300">
-                A Zero Eleven nasceu da paixão por criar soluções tecnológicas que desafiam o convencional. 
-                Somos uma equipe de desenvolvedores, designers e estrategistas dedicados a construir 
-                experiências digitais que impressionam e performam.
+                A Zero Eleven nasceu no final de 2024 da união de três amigos apaixonados por tecnologia. 
+                Começamos em uma pequena sala com um sonho grande: revolucionar o desenvolvimento de software.
               </p>
               <p className="text-gray-300">
-                Desde 2020, temos ajudado startups e empresas estabelecidas a navegar no mundo digital, 
-                combinando expertise técnica com visão criativa para entregar produtos que realmente fazem 
-                a diferença.
+                Em apenas seis meses, nosso talento e visão foram reconhecidos com nosso primeiro 
+                financiamento significativo, permitindo expandir nossa equipe e acelerar nosso crescimento.
               </p>
               
               {/* Destaques */}
@@ -58,17 +56,17 @@ export const About = () => {
                     <FiUsers className="text-indigo-400 text-xl" />
                   </div>
                   <div>
-                    <p className="font-bold text-white">+50</p>
-                    <p className="text-sm text-gray-400">Clientes satisfeitos</p>
+                    <p className="font-bold text-white">2+</p>
+                    <p className="text-sm text-gray-400">Talentos no time</p>
                   </div>
                 </div>
                 <div className="flex items-center space-x-3">
                   <div className="p-2 bg-purple-900/50 rounded-lg">
-                    <FiCode className="text-purple-400 text-xl" />
+                    <FiDollarSign className="text-purple-400 text-xl" />
                   </div>
                   <div>
-                    <p className="font-bold text-white">+120</p>
-                    <p className="text-sm text-gray-400">Projetos entregues</p>
+                    <p className="font-bold text-white">$3K</p>
+                    <p className="text-sm text-gray-400">Em financiamento</p>
                   </div>
                 </div>
               </div>
@@ -84,14 +82,19 @@ export const About = () => {
             className="relative"
           >
             <div className="bg-gray-800/50 border border-gray-700/50 rounded-xl p-6 backdrop-blur-sm">
-              <h4 className="text-xl font-semibold mb-6 text-white">Nossa Jornada</h4>
+              <h4 className="text-xl font-semibold mb-6 text-white">Marcos Importantes</h4>
               
               <div className="space-y-8 relative before:absolute before:top-0 before:bottom-0 before:left-5 before:w-px before:bg-gradient-to-b before:from-transparent before:via-indigo-500/50 before:to-transparent">
                 {timelineItems.map((item, index) => (
                   <div key={index} className="relative pl-10">
-                    <div className="absolute left-0 top-0 w-4 h-4 rounded-full bg-gradient-to-r from-indigo-500 to-purple-600 border-2 border-gray-800"></div>
-                    <h5 className="font-bold text-white">{item.year}</h5>
+                    <div className={`absolute left-0 top-0 w-4 h-4 rounded-full ${item.highlight ? 'bg-gradient-to-r from-indigo-500 to-purple-600 animate-pulse' : 'bg-gray-600'} border-2 border-gray-800`}></div>
+                    <h5 className="font-bold text-white">{item.date}</h5>
                     <p className="text-gray-300">{item.event}</p>
+                    {item.milestone && (
+                      <span className="inline-block mt-1 px-2 py-1 bg-indigo-900/30 text-indigo-300 text-xs rounded-full">
+                        {item.milestone}
+                      </span>
+                    )}
                   </div>
                 ))}
               </div>
@@ -107,7 +110,7 @@ export const About = () => {
           viewport={{ once: true }}
           className="mt-20"
         >
-          <h3 className="text-2xl font-bold text-center mb-12 text-white">Nossos Valores</h3>
+          <h3 className="text-2xl font-bold text-center mb-12 text-white">Nossa Cultura</h3>
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {values.map((value, index) => (
@@ -128,28 +131,40 @@ export const About = () => {
 
 // Dados para a timeline
 const timelineItems = [
-  { year: "2020", event: "Fundação da Zero Eleven com uma pequena equipe de 3 pessoas" },
-  { year: "2021", event: "Primeiro grande projeto para cliente internacional" },
-  { year: "2022", event: "Expansão da equipe e abertura de novo escritório" },
-  { year: "2023", event: "Lançamento de nossa plataforma de produtos próprios" },
-  { year: "2024", event: "Reconhecimento como uma das melhores empresas de tecnologia" }
+  { 
+    date: "Q4 2024", 
+    event: "Fundação da Zero Eleven pelos 2 co-fundadores",
+    milestone: "Nascimento",
+    highlight: true
+  },
+  { 
+    date: "Q1 2025", 
+    event: "Primeiro MVP desenvolvido e primeiros clientes piloto",
+    milestone: "Primeiro produto"
+  },
+  { 
+    date: "Q2 2025", 
+    event: "Primeira bolsa pela comos brasilS",
+    milestone: "Série Seed",
+    highlight: true
+  }
 ]
 
 // Dados para os valores
 const values = [
   {
-    icon: FiAward,
-    title: "Excelência",
-    description: "Buscamos a perfeição em cada detalhe, entregando qualidade excepcional em todos os projetos."
+    icon: FiCode,
+    title: "Velocidade",
+    description: "Movemos rápido, validamos ideias rapidamente e entregamos valor constante."
   },
   {
     icon: FiCpu,
-    title: "Inovação",
-    description: "Desafiamos o status quo, explorando novas tecnologias e abordagens criativas."
+    title: "Inovação Radical",
+    description: "Desafiamos todas as suposições e buscamos soluções nunca vistas."
   },
   {
-    icon: FiGlobe,
-    title: "Impacto",
-    description: "Criamos soluções que fazem diferença real na vida das pessoas e nos negócios."
+    icon: FiUsers,
+    title: "Time First",
+    description: "Investimos pesado no crescimento e bem-estar de cada membro do time."
   }
 ]

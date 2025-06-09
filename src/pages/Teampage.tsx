@@ -2,6 +2,10 @@
 import { motion } from 'framer-motion'
 import { FiGithub, FiTwitter, FiLinkedin, FiGlobe, FiAward, FiUsers } from 'react-icons/fi'
 import { SectionHeader } from '../components/SectionHeader'
+import teamMembers from '../data/teamMembers'
+
+// Definindo o tipo localmente
+type TeamMember = typeof teamMembers[0]
 
 const TeamPage = () => {
   return (
@@ -129,7 +133,7 @@ const TeamPage = () => {
 }
 
 // Team Member Profile Component
-const TeamMemberProfile = ({ member }: { member: typeof teamMembers[0] }) => (
+const TeamMemberProfile = ({ member }: { member: TeamMember }) => (
   <motion.div
     initial={{ opacity: 0, y: 20 }}
     whileInView={{ opacity: 1, y: 0 }}
@@ -189,79 +193,6 @@ const TeamMemberProfile = ({ member }: { member: typeof teamMembers[0] }) => (
     </div>
   </motion.div>
 )
-
-// Team Data
-const teamMembers = [
-  {
-    id: 1,
-    name: "Alex Carter",
-    role: "Lead Developer",
-    expertise: "Architecture & Backend",
-    bio: "10+ years building scalable systems. Loves TypeScript and clean architecture.",
-    avatarUrl: "https://randomuser.me/api/portraits/men/32.jpg",
-    coverUrl: "https://images.unsplash.com/photo-1551033406-611cf9a28f67?q=80&w=1974&auto=format&fit=crop",
-    twitter: "#",
-    linkedin: "#",
-    github: "#",
-    website: "#"
-  },
-  {
-    id: 2,
-    name: "Sam Lee",
-    role: "Frontend Specialist",
-    expertise: "React & UX",
-    bio: "Passionate about creating intuitive user experiences with modern web technologies.",
-    avatarUrl: "https://randomuser.me/api/portraits/women/44.jpg",
-    coverUrl: "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?q=80&w=2072&auto=format&fit=crop",
-    twitter: "#",
-    linkedin: "#",
-    github: "#"
-  },
-  {
-    id: 3,
-    name: "Jordan Taylor",
-    role: "Product Designer",
-    expertise: "UI/UX & Prototyping",
-    bio: "Design thinker focused on solving real problems through beautiful interfaces.",
-    avatarUrl: "https://randomuser.me/api/portraits/men/75.jpg",
-    coverUrl: "https://images.unsplash.com/photo-1499750310107-5fef28a66643?q=80&w=2070&auto=format&fit=crop",
-    twitter: "#",
-    linkedin: "#",
-    website: "#"
-  },
-  {
-    id: 4,
-    name: "Morgan Wright",
-    role: "DevOps Engineer",
-    expertise: "Cloud Infrastructure",
-    bio: "Automation enthusiast who keeps our systems running smoothly 24/7.",
-    avatarUrl: "https://randomuser.me/api/portraits/women/68.jpg",
-    coverUrl: "https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?q=80&w=2069&auto=format&fit=crop",
-    github: "#",
-    linkedin: "#"
-  },
-  {
-    id: 5,
-    name: "Casey Smith",
-    role: "QA Specialist",
-    expertise: "Testing & Automation",
-    bio: "Detail-oriented tester ensuring our products meet the highest standards.",
-    avatarUrl: "https://randomuser.me/api/portraits/women/63.jpg",
-    coverUrl: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=2070&auto=format&fit=crop",
-    linkedin: "#"
-  },
-  {
-    id: 6,
-    name: "Riley Johnson",
-    role: "Project Manager",
-    expertise: "Agile & Scrum",
-    bio: "Keeps projects on track and teams aligned with business goals.",
-    avatarUrl: "https://randomuser.me/api/portraits/men/45.jpg",
-    coverUrl: "https://images.unsplash.com/photo-1542744173-8e7e53415bb0?q=80&w=2070&auto=format&fit=crop",
-    twitter: "#",
-    linkedin: "#"
-  }
-]
 
 // Culture Values
 const cultureValues = [

@@ -32,8 +32,8 @@ export const StatsSection = () => (
 )
 
 const stats: Stat[] = [
-  { number: "50+", label: "Projects Completed" },
-  { number: "10M+", label: "Lines of Code" },
+  { number: "4+", label: "Projects Completed" },
+  { number: "10k+", label: "Lines of Code" },
   { number: "100%", label: "Client Satisfaction" },
   { number: "∞", label: "Cups of Coffee" }
 ]

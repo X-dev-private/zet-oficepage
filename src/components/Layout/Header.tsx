@@ -12,7 +12,7 @@ const Header = () => {
         <div className="flex items-center justify-between h-24">
           {/* Logo e nome da equipe */}
           <div className="flex items-center space-x-4 group">
-            <div className="p-1.5 rounded-lg bg-gradient-to-br from-indigo-500 to-purple-600 group-hover:rotate-6 transition-transform duration-300">
+            <div className="p-1.5 rounded-lg bg-gradient-to-br from-gray-700 to-gray-900 group-hover:rotate-6 transition-transform duration-300">
               <img 
                 src="../../../public/ChatGPT Image 6 de jun. de 2025, 03_24_14.png"
                 alt="Zero Eleven Team Logo"
